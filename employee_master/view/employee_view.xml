@@ -1,0 +1,149 @@
+<odoo>
+
+      <record model="ir.ui.view" id="employee_master_data_tree_view">
+            <field name="name">Master Data</field>
+            <field name="model">employee.master</field>
+            <field name="arch" type="xml">
+                <tree string="My Dashboard">
+                     <field name="name"/>
+                     <field name="employee" />
+                     <field name="department"/>
+                     <field name="qualification"/>
+                     <field name="blood_group"/>
+                </tree>
+            </field>
+      </record>
+
+      <record model="ir.ui.view" id="employee_master_data_form_view">
+            <field name="name">Master Data</field>
+            <field name="model">employee.master</field>
+            <field name="arch" type="xml">
+                <form string="My Dashboard">
+                    <sheet>
+                        <group name="g1" string="Employee Master Form" style="text-align:center">
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="employee" />
+                                <field name="contact" />
+                                <field name="current_address"/>
+                                <field name="permanent_address"/>
+                                <field name="marital_status"/>
+                            </group>
+
+                            <group>
+                                <field name="gender"/>
+                                <field name="blood_group" />
+                                <field name="nationality"/>
+                                <field name="dob"/>
+                                <field name="personal_email_id" />
+                                <field name="Upload_resume"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page name="employee_details" string="General Information">
+                                <form string="General">
+                                    <group>
+                                        <group>
+                                            <field name="department"/>
+                                            <field name="qualification"/>
+                                            <field name="doj"/>
+                                            <field name="designation"/>
+                                            <field name="location"/>
+                                            <field name="l1_manager"/>
+                                            <field name="l2_manager"/>
+                                        </group>
+                                        <group>
+                                            <field name="hod"/>
+                                            <field name="director"/>
+                                            <field name="company_email_id" />
+                                            <field name="emp_status"/>
+                                            <field name="probation_date"/>
+                                            <field name="appraisal_date"/>
+                                            <field name="sal_details"/>
+                                            <field name="resignation_date"/>
+                                        </group>
+                                    </group>
+
+                                </form>
+                            </page>
+                            <page name="employee_details" string="Personal Information">
+                                <form string="General">
+                                    <group>
+                                        <group>
+                                            <field name="pan_no"/>
+                                            <field name="aadhar_no" />
+                                            <field name="acc_no" />
+                                            <field name="bank_name"/>
+                                            <field name="ifsc_code" />
+                                            <field name="upload_files"/>
+                                            <field name="grade"/>
+                                            <field name="previous_employee_details"/>
+                                            <field name="uan_no"/>
+                                            <field name="esic_no"/>
+                                        </group>
+                                        <group>
+                                            <field name="attendance_type"/>
+                                            <field name="emergency_no"/>
+                                            <field name="driving_license"/>
+                                            <field name="expreience_before_joining"/>
+                                            <field name="pf_no"/>
+                                            <field name="wedding_anniversary"/>
+                                            <field name="resigned"/>
+                                            <field name="exit_date"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </page>
+
+                            <page name="family_details" string="Family Details">
+                                <form string="Family Details">
+                                    <group>
+                                        <group>
+                                            <field name="father_name"/>
+                                            <field name="mother_name"/>
+                                            <field name="family_contact"/>
+                                        </group>
+                                        <group>
+                                            <field name="marital_status"/>
+                                            <field name="wife_name"/>
+                                            <field name="child1_name"/>
+                                            <field name="child2_name"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="action_employee_data">
+            <field name="name">Master Data</field>
+            <field name="res_model">employee.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click here to create new Details.
+              </p>
+            </field>
+        </record>
+
+         <menuitem name ="Master Data"
+                   id="employee_master_menu"
+                   parent="hr.menu_hr_root"
+                   sequence="7"
+                   web_icon="employee_master,static/description/index.png"
+                   />
+
+         <menuitem name ="Employee Data"
+                   id="employee_data_menu"
+                   parent="employee_master_menu"
+                   action="action_employee_data"/>
+
+</odoo>

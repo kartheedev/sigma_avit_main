@@ -1,0 +1,9 @@
+
+<odoo>
+    <template id="assets backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/sigma_core/static/src/js/data.js" />
+        </xpath>
+    </template>
+</odoo>

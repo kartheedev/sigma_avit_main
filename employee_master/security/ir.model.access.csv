@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_employee_master_manager,employee.master.manager,employee_master.model_employee_master,hr.group_hr_manager,1,1,1,1
+

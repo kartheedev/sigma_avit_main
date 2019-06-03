@@ -1,0 +1,22 @@
+{
+    'name': 'Open HRMS Leave Request Aliasing',
+    'version': '12.0.1.0.0',
+    'summary': """Allows You To Create Leave Request Automatically From Incoming Mails""",
+    'description': 'This module allows you to create leave request directly from incoming mails.',
+    'category': 'Generic Modules/Human Resources',
+    'author': 'Indglobal digital',
+    'company': 'Indglobal digital pvt ltd',
+    'website': "https://indglobal.in/",
+    'depends': ['base_setup', 'hr_holidays'],
+    'data': [
+        'views/hr_leave_template.xml',
+        'views/leave_request_alias_view.xml',
+        'views/res_config_views.xml',
+    ],
+    'demo': [],
+    'images': ['static/description/banner.jpg'],
+    'license': 'AGPL-3',
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+}
